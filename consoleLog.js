@@ -1,3 +1,5 @@
+import { changeProperty } from './type_syntax/function.js'
+
 function consoleLog() {
     const obj = {
         a: 'A',
@@ -5,7 +7,13 @@ function consoleLog() {
         c: 'C',
         f: 'd'
     }
-    console.log('a' instanceof obj)
+    testLabel: if (true) {
+        break testLabel;
+    }
+    testLabel: for (let i = 0; i <obj.length; i++) {
+
+    }
+    console.log(this.testLabel)
 }
 
 export default consoleLog;

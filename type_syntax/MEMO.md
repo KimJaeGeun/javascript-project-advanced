@@ -93,3 +93,13 @@
         - 값이 아닌 key값을 기준으로 검산
 4. instanceof
     - TODO: 이후 기록
+
+## 라벨링
+- 자바스크립트에서는 제어문에 라벨을 붙일 수 있다.
+- 해당 제어문을 의미함(제어문의 식별자)으로 break, continue와 함께 사용할 수 있다.
+    - continue는 반복문 한정으로 사용 가능하다
+```
+teatLabel: for (let i = 0; i < 5; i++) {
+    break testLabel;
+}
+```
