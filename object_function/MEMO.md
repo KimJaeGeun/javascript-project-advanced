@@ -26,6 +26,4 @@
 - ES6부터 추가, TypedArray
     - 이후 기록
 
-- delete연산자
-    - 배열내 특정 요소를 삭제(undefined로 값을 대체)
-    - 요소값만을 삭제하므로 인덱스는 남아있음(배열의 length에 영향X)
+- [delete연산자]()

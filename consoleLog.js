@@ -1,5 +1,11 @@
 function consoleLog() {
-    console.log()
+    const obj = {
+        a: 'A',
+        b: 'B',
+        c: 'C',
+        f: 'd'
+    }
+    console.log('a' instanceof obj)
 }
 
-export default consoleLog()
+export default consoleLog;

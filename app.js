@@ -1,3 +1,5 @@
+import consoleLog from "./consoleLog.js";
+
 function app() {
     consoleLog();
 }
