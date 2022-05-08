@@ -103,3 +103,21 @@ teatLabel: for (let i = 0; i < 5; i++) {
     break testLabel;
 }
 ```
+
+## 제어문
+- for문의 복수 초기식
+```
+let a = 0, b = 0;
+for (let i = 0, j = 0, k = false; j < 5; i++) {
+    if (i % 5 === 0) {
+        j++;
+        if (j === 5) {
+            k = true;
+        }
+    }
+    a = i;
+    b = j;
+}
+console.log(a);
+console.log(b);
+```
