@@ -88,3 +88,43 @@ function consoleLog() {
     // 하위계층에서 선언된 것을 호이스팅은 불가하다(const, let이니깐)
 }
 ```
+
+## 클로저
+- 함수내 프로퍼티가 외부인자를 참조하고 있는 상황(그러한 랙시컬 스코프 그자체)
+```
+function testClosure() {
+    // 외부 인자
+    const hoge = 1;
+    function console() {
+        // 외부 인자 참조
+        return hoge++;
+    }
+}
+// 새로이 할당한 함수객체 func1에는 console(), console()의 클로저 testClosure()내부가 있다.
+// 클로저는 할당받는 공간이기에 새롭게 할당받은 다른 함수객체와 공간을 공유하지 않는다.
+const func1 = testClosure();
+const func2 = testClosure();
+
+// 이경우 둘의 출력값이 같다.(같은 외부인자를 참조하는 것으로 보이나 다른 공간이다.)
+console.log(func1)
+console.log(func2)
+```
+
+## 고차함수
+- 함수를 인자로 받거나 반환값으로 함수를 내보내는 것
+```
+// 인자가 함수
+function testFunc(f) {
+    return f(1)
+}
+testFunc(function(a) {return a + 1})
+
+// 반환값이 함수
+function testFunc(x) {
+    return function() {
+        return x + kl 10;
+    }
+}
+```
+
+- 메모이제이션
