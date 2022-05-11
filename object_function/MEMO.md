@@ -118,6 +118,7 @@ function testFunc(f) {
     return f(1)
 }
 testFunc(function(a) {return a + 1})
+    - 해당 인자인 함수를 콜백함수라 한다.
 
 // 반환값이 함수
 function testFunc(x) {
@@ -127,4 +128,40 @@ function testFunc(x) {
 }
 ```
 
-- 메모이제이션
+### 메모이제이션
+- 계산한 값을 저장하는 기법
+- 함수의 경우 인자로 받은 함수를 실행한 값을 따로 관리한뒤 그 값을 이용 하는 것(중첩, 재귀함수에서 사용)
+
+## 함수의 매개변수
+- 함수에서 지정한 인자외의 복수의 인자를 사용할 경우 설정
+    - 매개변수의 경우 배열의 값으로 받는다
+    ```
+    function test(a, b, ...args) {
+        console.log(a);
+        console.log(b);
+        console.log(args);
+    }
+
+    test(1, 2, 3, 4, 5 );
+    // 1
+    // 2
+    // [3, 4, 5]
+    ```
+
+## 이터레이터 함수
+- 반복가능한 객체가 되는 함수
+    - 함수내 랙시컬스코프에 yield반환을 삽입, 해당 yield값이 반복시 해당되는 객체가 됨
+    ```
+    function* iter() {
+        yield 0;
+        yield 1;
+        yield 2;
+    }
+
+    for(const item of iter) {
+        console.log(item);
+    }
+    // 1
+    // 2
+    // 3
+    ```
