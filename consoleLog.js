@@ -1,5 +1,6 @@
 import { changeProperty } from './type_syntax/function.js'
 import { duplicationFunc, protoObjectType, protoFunctionType } from './object_function/function.js'
+import { sortFunc } from './research.js'
 
 function consoleLog() {
 const list = [{
@@ -33,12 +34,25 @@ const list = [{
     value: []
 }]
 
-const testFunc = { test: console.log("test")};
-testFunc.__proto__ = protoObjectType;
-console.log(testFunc.sortName(list));
+// const testFunc = { test: console.log("test")};
+// testFunc.__proto__ = protoObjectType;
+// console.log(testFunc.sortName(list));
 
-const testFunc2 = function() { test: console.log("test")};
-// testFunc2.__proto__ = protoFunctionType;
-console.log(protoFunctionType().sortName(list))
+// const testFunc2 = function() { test: console.log("test")};
+// // testFunc2.__proto__ = protoFunctionType;
+// console.log(protoFunctionType().sortName(list))
+const testArray = [
+    {
+        name: "test) - test092-j"
+    },
+    {
+        name: "test) - test031-k"
+    },
+    {
+        name: "test) - test052-b"
+    }
+]
+;
+console.log(testArray.sort((a, b) => sortFunc('s', a.name, b.name)))
 }
 export default consoleLog;
