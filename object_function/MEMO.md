@@ -165,3 +165,65 @@ function testFunc(x) {
     // 2
     // 3
     ```
+## object내 열거
+- for in 을 사용하여 object내 key값을 열거
+- Object.keys()를 이용하여 object내 key값을 배열로 반환(숨겨진 프로퍼티, symbol값은 나오지않는다.)
+- Object.getOwnPropertyNames()는 Object.keys()와 같은 기능이나 숨겨진 프로퍼티나 symbol값도 반환
+
+## JSON
+- 객체의 직렬화
+    - 객체로 환원화 가능한 문자열
+
+- **내장객체**
+1. JSON.stringify()
+    - 객체를 JSON으로 형변환
+        1. 열거 가능한 프로퍼티만을 직렬화
+            - 숨겨진 프로퍼티, symbol등은 표기되지않음
+        2. function, undefined, RegExp, Error, symbol은 직렬화 불가
+        3. Date객체는 ISO 포맷의 문자열로 직렬화
+            - JSON.parse의 경우 그대로 출력
+        4. NaN, Infinity, -Infinity, null 는 직렬화 불가
+2. JSON.parse()
+    - JSON을 객체로 형변환
+
+
+## ES6이후 추가 객체 기능
+1. 계산된 프로퍼티명
+```
+const name = 'NAME';
+const i = 1
+
+const obj = {
+    [name + i] : '?'
+}
+
+console.log(obj)
+//  { NAME1: '?' }
+```
+
+2. 약식 표기
+```
+const name = 'NAME';
+
+const obj = {
+    name
+}
+
+console.log(obj)
+//  { name: 'NAME' }
+```
+
+3. 메서드 약식표기
+```
+const name = 'kim';
+
+const obj = {
+    name
+    sayKim() {
+        console.log(this.name)
+    }
+}
+
+obj.sayKim()
+//  kim
+```

@@ -6,4 +6,18 @@ function sortFunc(type, a, b) {
     }
 }
 
+// const testArray = [
+//     {
+//         name: "test) - test092-j"
+//     },
+//     {
+//         name: "test) - test031-k"
+//     },
+//     {
+//         name: "test) - test052-b"
+//     }
+// ]
+// ;
+// console.log(testArray.sort((a, b) => sortFunc('s', a.name, b.name)))
+
 export { sortFunc }

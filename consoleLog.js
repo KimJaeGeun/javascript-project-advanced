@@ -3,56 +3,16 @@ import { duplicationFunc, protoObjectType, protoFunctionType } from './object_fu
 import { sortFunc } from './research.js'
 
 function consoleLog() {
-const list = [{
-    no: 1,
-    name: 'tgbnhy',
-    option: false,
-    value: []
-},
-{
-    no: 1,
-    name: 'qwer',
-    option: true,
-    value: [1]
-},
-{
-    no: 1,
-    name: 'asdf',
-    option: false,
-    value: []
-},
-{
-    no: 1,
-    name: 'abc',
-    option: false,
-    value: [1,4,8]
-},
-{
-    no: 1,
-    name: 'zxcv',
-    option: true,
-    value: []
-}]
+    const name = 'kim';
 
-// const testFunc = { test: console.log("test")};
-// testFunc.__proto__ = protoObjectType;
-// console.log(testFunc.sortName(list));
-
-// const testFunc2 = function() { test: console.log("test")};
-// // testFunc2.__proto__ = protoFunctionType;
-// console.log(protoFunctionType().sortName(list))
-const testArray = [
-    {
-        name: "test) - test092-j"
-    },
-    {
-        name: "test) - test031-k"
-    },
-    {
-        name: "test) - test052-b"
+    const obj = {
+        name,
+        sayKim() {
+            console.log(this.name)
+        }
     }
-]
-;
-console.log(testArray.sort((a, b) => sortFunc('s', a.name, b.name)))
+
+    obj.sayKim()
+    //  kim
 }
 export default consoleLog;
