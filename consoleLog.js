@@ -3,16 +3,16 @@ import { duplicationFunc, protoObjectType, protoFunctionType } from './object_fu
 import { sortFunc } from './research.js'
 
 function consoleLog() {
-    const name = 'kim';
-
+    const array = ['a', 'b'];
     const obj = {
-        name,
-        sayKim() {
-            console.log(this.name)
-        }
+        a: 'A',
+        b: 'B'
     }
+    
 
-    obj.sayKim()
-    //  kim
+    // const [t1, t2] = array;
+    const {a, test2} = obj;
+    console.log(a)
+    console.log(test2)
 }
 export default consoleLog;
