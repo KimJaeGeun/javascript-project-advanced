@@ -1,0 +1,58 @@
+@import './web_document/assets/css/dropdown.css';
+
+/* css 변수화 */
+
+:root {
+    --red: #ff0000;
+    --blue: #0000ff;
+    --green: #00ff00;
+    --yellow: #ffff00;
+    --grey: #505050;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+* {
+    color: var(--fC);
+    background-color: var(--bg);
+}
+
+#app {
+    display: flex;
+    justify-content: space-around;
+}
+
+#list {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn_box {
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+}
+
+.red {
+    --bg: var(--red)
+}
+
+.blue {
+    --bg: var(--blue)
+}
+
+.grey {
+    --bg: var(--grey)
+}
+
+.green {
+    --bg: var(--green)
+}
+
+.yellow {
+    --bg: var(--yellow)
+}
+
+.btn:focus {
+    outline-style: none;
+}

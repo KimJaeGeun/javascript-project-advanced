@@ -1,8 +1,12 @@
 import consoleLog from "./consoleLog.js";
+import dropdown from './web_document/components/Dropdown.js'
+import listRender from './web_document/components/List.js'
+
 
 function app() {
     // consoleLog();
-    document.getElementById("qwer").style.backgroundColor= "red";
+    new listRender();
+    new dropdown();
 }
 
-export default new app()
+export default new app(document.querySelector('#app'))
