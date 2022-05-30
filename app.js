@@ -4,9 +4,9 @@ import listRender from './web_document/components/List.js'
 
 
 function app() {
-    // consoleLog();
-    new listRender();
-    new dropdown();
+    consoleLog();
+    // new listRender();
+    // new dropdown();
 }
 
 export default new app(document.querySelector('#app'))

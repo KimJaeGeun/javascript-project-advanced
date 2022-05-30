@@ -18,3 +18,10 @@
 2. mixin함수의 실용법에 대하여
 3. 유사배열 객체의 타입값 및 유사배열과 배열을 코드상 구분 하는 것에 대하여
 4. map 객체의 활용
+5. 아래의 의미
+    ```
+    const test = {a: 'A', obj: 'qwer'}
+    const {obj = {}, a} = test || {}
+
+    console.log(obj)
+    ```
