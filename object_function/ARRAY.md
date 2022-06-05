@@ -13,21 +13,21 @@
 2. 접근자 메서드
     - 원본 배열을 복사한 후 가공하여 만들어진 새로운 배열을 반환
     - 예시)
-    ```
-    const array1 = [1, 2, 3];
-    const array2 = [4, 5];
-    array1.concat(array2);
-    // [1, 2, 3, 4, 5]
-    ```
+        ```
+        const array1 = [1, 2, 3];
+        const array2 = [4, 5];
+        array1.concat(array2);
+        // [1, 2, 3, 4, 5]
+        ```
 3. 반복 메서드
     - 원본 배열 요소를 순회하며 작업
     - 예시)
-    ```
-    const array = [1, 2, 3];
+        ```
+        const array = [1, 2, 3];
 
-    array.map(item => item + 1);
-    // [2, 3, 4]
-    ```
+        array.map(item => item + 1);
+        // [2, 3, 4]
+        ```
 
 ## 비구조화 할당
 - 반복 가능한 객체의 요소를 할당하는 것
